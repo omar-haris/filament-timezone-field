@@ -1,0 +1,88 @@
+{
+    "name": "omar-haris/filament-timezone-field",
+    "description": "A Laravel Filament component that enables users to choose a specific time zone.",
+    "keywords": [
+        "omar-haris",
+        "laravel",
+        "filament-timezone-field",
+        "filament",
+        "filamentphp",
+        "timezone"
+    ],
+    "homepage": "https://github.com/omar-haris/filament-timezone-field",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Omar Haris",
+            "email": "omar@haris.family",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0-stable",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "illuminate/contracts": "^10.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.8",
+        "larastan/larastan": "^2.0.1",
+        "orchestra/testbench": "^8.8",
+        "pestphp/pest": "^2.20",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OmarHaris\\FilamentTimezoneField\\": "src/",
+            "OmarHaris\\FilamentTimezoneField\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OmarHaris\\FilamentTimezoneField\\Tests\\": "tests/",
+            "Workbench\\App\\": "workbench/app/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@composer run prepare",
+        "clear": "@php vendor/bin/testbench package:purge-filament-timezone-field --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": [
+            "@composer run prepare",
+            "@php vendor/bin/testbench workbench:build --ansi"
+        ],
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "@composer run build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OmarHaris\\FilamentTimezoneField\\FilamentTimezoneFieldServiceProvider"
+            ],
+            "aliases": {
+                "FilamentTimezoneField": "OmarHaris\\FilamentTimezoneField\\Facades\\FilamentTimezoneField"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
