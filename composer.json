@@ -15,7 +15,8 @@
         {
             "name": "Omar Haris",
             "email": "omar@haris.family",
-            "role": "Developer"
+            "role": "Developer",
+            "homepage": "https://www.linkedin.com/in/omarkha"
         }
     ],
     "require": {
