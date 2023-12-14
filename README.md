@@ -4,10 +4,16 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/omar-haris/filament-timezone-field/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/omar-haris/filament-timezone-field/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/omar-haris/filament-timezone-field/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/omar-haris/filament-timezone-field/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/omar-haris/filament-timezone-field.svg?style=flat-square)](https://packagist.org/packages/omar-haris/filament-timezone-field)
+[![Total Stars](https://img.shields.io/github/stars/omar-haris/filament-timezone-field?style=flat-square)](https://github.com/omar-haris/filament-timezone-field)
 
 A Laravel Filament component that enables users to choose a specific timezone grouped by regions, with support for multiple languages.
 
 <img src="./docs/timezone.png" width="400"/> <img src="./docs/timezone-arabic.png" width="400"/>
+
+## Requirements
+
+- PHP 8.1^
+- Filament v3
 
 ## Installation
 
