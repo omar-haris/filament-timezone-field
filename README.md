@@ -37,14 +37,14 @@ Supported languages
 #### Add to your filament form resource:
 
 ```php
-use OmarHaris\FilamentTimezoneField\Forms\Components\Timezone;
+use OmarHaris\FilamentTimezoneField\Forms\Components\Timezone as TimezoneComponent;
  
 public static function form(Form $form): Form
 {
     return $form
         ->schema([
             // ...
-            Timezone::make('timezone')
+            TimezoneComponent::make('timezone')
                 ->searchable()
                 ->required(),
             // ...
@@ -55,14 +55,14 @@ public static function form(Form $form): Form
 #### Add to your filament table resource:
 
 ```php
-use OmarHaris\FilamentTimezoneField\Tables\Columns\Timezone;
+use OmarHaris\FilamentTimezoneField\Tables\Columns\Timezone as TimezoneColumn;
  
 public static function form(Form $form): Form
 {
     return $form
         ->columns([
             // ...
-            Timezone::make('timezone')
+            TimezoneColumn::make('timezone')
                 ->sortable()
                 ->toggleable(),
             // ...
@@ -72,14 +72,14 @@ public static function form(Form $form): Form
 
 #### You can use it as a table filter
 ```php
-use OmarHaris\FilamentTimezoneField\Tables\Filters\Timezone;
+use OmarHaris\FilamentTimezoneField\Tables\Filters\Timezone as TimezoneFilter;
 
 public static function table(Table $table): Table
 {
     return $table
         //...
         ->filters([
-            Timezone::make('timezone'),
+            TimezoneFilter::make('timezone'),
             // ...
         ])
 }
