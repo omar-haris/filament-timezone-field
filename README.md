@@ -7,7 +7,7 @@
 
 A Laravel Filament component that enables users to choose a specific timezone grouped by regions, with support for multiple languages.
 
-![Filament Timezone Field](./docs/timezone.png)
+<img src="./docs/timezone.png" width="425"/> <img src="./docs/timezone-arabic.png" width="425"/>
 
 ## Installation
 
