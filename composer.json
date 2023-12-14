@@ -1,6 +1,6 @@
 {
     "name": "omar-haris/filament-timezone-field",
-    "description": "A Laravel Filament component that enables users to choose a specific time zone.",
+    "description": "A Laravel Filament component that enables users to choose a specific timezone grouped by regions, with support for multiple languages.",
     "keywords": [
         "omar-haris",
         "laravel",
