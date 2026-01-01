@@ -2,6 +2,14 @@
 
 All notable changes to `filament-timezone-field` will be documented in this file.
 
+## v3.0.0 - 2026-01-01
+
+- Added support for Filament v4 while maintaining backward compatibility with Filament v3
+- Updated PHP requirement to ^8.1 (supports both v3 and v4)
+- Updated dependencies for compatibility with Filament v3 and v4
+- Updated test dependencies to support multiple versions
+- Updated documentation with examples for both Filament v3 and v4
+
 ## v2.0.0 - 2024-09-29
 
 - Update language keys when saving to the database to support standard timezone names.

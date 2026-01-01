@@ -13,7 +13,8 @@ A Laravel Filament component that enables users to choose a specific timezone gr
 ## Requirements
 
 - PHP 8.1^
-- Filament v3
+- Filament v3 or v4 (both versions are supported)
+- Laravel 10^, Laravel 11^, or Laravel 12^
 
 ## Installation
 
@@ -36,9 +37,11 @@ Supported languages
 
 #### Add to your filament form resource:
 
+**For Filament v3:**
 ```php
 use OmarHaris\FilamentTimezoneField\Forms\Components\Timezone as TimezoneComponent;
- 
+use Filament\Forms\Form;
+
 public static function form(Form $form): Form
 {
     return $form
@@ -52,14 +55,33 @@ public static function form(Form $form): Form
 }
 ```
 
+**For Filament v4:**
+```php
+use OmarHaris\FilamentTimezoneField\Forms\Components\Timezone as TimezoneComponent;
+use Filament\Schemas\Schema;
+
+public static function form(Schema $form): Schema
+{
+    return $form
+        ->components([
+            // ...
+            TimezoneComponent::make('timezone')
+                ->searchable()
+                ->required(),
+            // ...
+        ]);
+}
+```
+
 #### Add to your filament table resource:
 
 ```php
 use OmarHaris\FilamentTimezoneField\Tables\Columns\Timezone as TimezoneColumn;
- 
-public static function form(Form $form): Form
+use Filament\Tables\Table;
+
+public static function table(Table $table): Table
 {
-    return $form
+    return $table
         ->columns([
             // ...
             TimezoneColumn::make('timezone')
@@ -70,9 +92,11 @@ public static function form(Form $form): Form
 }
 ```
 
-#### You can use it as a table filter
+#### You can use it as a table filter:
+
 ```php
 use OmarHaris\FilamentTimezoneField\Tables\Filters\Timezone as TimezoneFilter;
+use Filament\Tables\Table;
 
 public static function table(Table $table): Table
 {
@@ -81,7 +105,7 @@ public static function table(Table $table): Table
         ->filters([
             TimezoneFilter::make('timezone'),
             // ...
-        ])
+        ]);
 }
 ```
 
